@@ -1,23 +1,31 @@
 {
-  "name": "playwright_automation_project",
+  "name": "qa_playwright_automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright UI and API Automation Task",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui/",
+    "test:api": "npx playwright test tests/api/",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShrutiKumariKarna/Playwright-Automation-Project.git"
+    "url": "git+https://github.com/ShrutiKumariKarna/QA_Playwright_Automation.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shruti Kumari Karna",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/ShrutiKumariKarna/Playwright-Automation-Project/issues"
+    "url": "https://github.com/ShrutiKumariKarna/QA_Playwright_Automation/issues"
   },
-  "homepage": "https://github.com/ShrutiKumariKarna/Playwright-Automation-Project#readme",
+  "homepage": "https://github.com/ShrutiKumariKarna/QA_Playwright_Automation#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.2"
+    "@types/node": "^25.9.1",
+    "dotenv": "^16.6.1"
   }
 }
