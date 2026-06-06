@@ -1,0 +1,23 @@
+{
+  "name": "playwright_automation_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShrutiKumariKarna/Playwright-Automation-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShrutiKumariKarna/Playwright-Automation-Project/issues"
+  },
+  "homepage": "https://github.com/ShrutiKumariKarna/Playwright-Automation-Project#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2"
+  }
+}
