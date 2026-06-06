@@ -234,5 +234,5 @@ The pipeline automatically:
 
 **Shruti Kumari Karna**
 
-QA Automation Engineer | Playwright | TypeScript | API Testing
+
 
