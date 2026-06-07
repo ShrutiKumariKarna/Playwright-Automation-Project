@@ -4,7 +4,7 @@
 **Tool:** Playwright (TypeScript)
 **Website Tested:** https://www.saucedemo.com
 **API Tested:** https://jsonplaceholder.typicode.com
-**GitHub:** https://github.com/ShrutiKumariKarna/QA_Playwright_Automation
+**GitHub:** https://github.com/ShrutiKumariKarna/Playwright-Automation-Project.git
 
 ---
 
