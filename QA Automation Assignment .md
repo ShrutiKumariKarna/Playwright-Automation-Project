@@ -34,34 +34,37 @@ demonstrating a variety of test scenarios.
 ## 3. Project Structure
 
 ```
-QA_Playwright_Automation/
+Playwright-Automation-Project/
 ├── .github/
 │   └── workflows/
-│       └── playwright.yml        CI/CD pipeline
+│       └── playwright.yml                  CI/CD pipeline
 ├── fixtures/
-│   └── testFixtures.ts           Shared test setup (auto-login fixture)
+│   └── testFixtures.ts                     Shared test setup (auto-login fixture)
 ├── pages/
-│   ├── LoginPage.ts              Page Object for login screen
-│   ├── InventoryPage.ts          Page Object for product inventory
-│   ├── CartPage.ts               Page Object for shopping cart
-│   └── CheckoutPage.ts           Page Object for checkout flow
+│   ├── LoginPage.ts                        Page Object for login screen
+│   ├── InventoryPage.ts                    Page Object for product inventory
+│   ├── CartPage.ts                         Page Object for shopping cart
+│   └── CheckoutPage.ts                     Page Object for checkout flow
 ├── utils/
-│   └── helpers.ts                Test data constants and helper functions
+│   └── helpers.ts                          Test data constants and helper functions
 ├── tests/
 │   ├── ui/
-│   │   ├── login.spec.ts         Login test scenarios
-│   │   ├── inventory.spec.ts     Inventory and sorting tests
-│   │   ├── cart.spec.ts          Cart add/remove tests
-│   │   └── checkout.spec.ts      Checkout flow tests
+│   │   ├── login.spec.ts                   Login test scenarios
+│   │   ├── inventory.spec.ts               Inventory and sorting tests
+│   │   ├── cart.spec.ts                    Cart add/remove tests
+│   │   └── checkout.spec.ts                Checkout flow tests
 │   └── api/
-│       ├── users.spec.ts         API CRUD tests
-│       └── negative.spec.ts      API negative test cases
-├── .env                          Environment variables (not committed)
-├── .env.example                  Template for environment variables
-├── playwright.config.ts          Playwright configuration
-├── tsconfig.json                 TypeScript configuration
-├── TEST_PLAN.md                  Full test plan document
-└── README.md                     Setup and usage instructions
+│       ├── users.spec.ts                   API CRUD tests
+│       └── negative.spec.ts                API negative test cases
+├── assets/
+│   └── report-screenshot.png               HTML report screenshot
+├── .env                                    Environment variables (not committed)
+├── .env.example                            Template for environment variables
+├── playwright.config.ts                    Playwright configuration
+├── tsconfig.json                           TypeScript configuration
+├── TEST_PLAN.md                            Full test plan document
+├── QA Automation Assignment.md             Assignment documentation
+└── README.md                              Setup and usage instructions
 ```
 
 ---

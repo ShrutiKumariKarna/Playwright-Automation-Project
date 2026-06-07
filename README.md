@@ -181,10 +181,6 @@ The HTML report includes:
 * Video recordings saved on failure
 * Trace files for step by step debugging
 
-### Report Preview
-
-![Playwright HTML Report](assets/test-report.html)
-
 ---
 
 ## Test Coverage
