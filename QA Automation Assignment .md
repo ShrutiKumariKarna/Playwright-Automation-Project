@@ -1,4 +1,4 @@
-# QA Automation Engineer Assignment — Documentation
+# QA Automation Assignment — Documentation
 
 **Candidate:** Shruti Kumari Karna
 **Tool:** Playwright (TypeScript)

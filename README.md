@@ -21,7 +21,7 @@ This framework provides:
 ## Project Structure
 
 ```text
-QA_Playwright_Automation/
+Playwright-Automation-Project/
 ├── .github/
 │   └── workflows/
 │       └── playwright.yml
@@ -43,9 +43,12 @@ QA_Playwright_Automation/
 │   └── api/
 │       ├── users.spec.ts
 │       └── negative.spec.ts
+├── assets/
+│   └── report-screenshot.png
 ├── .env.example
 ├── playwright.config.ts
 ├── TEST_PLAN.md
+├── QA Automation Assignment.md
 └── README.md
 ```
 
@@ -171,6 +174,16 @@ The report will be available at:
 ```text
 http://localhost:9323
 ```
+The HTML report includes:
+
+* Pass/fail status for all 22 test cases
+* Screenshots captured automatically on failure
+* Video recordings saved on failure
+* Trace files for step by step debugging
+
+### Report Preview
+
+![Playwright HTML Report](assets/test-report.html)
 
 ---
 
