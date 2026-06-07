@@ -1,26 +1,29 @@
 import { Page } from '@playwright/test';
 
 export class InventoryPage {
-  readonly page: Page;
+  page: Page;
 
   constructor(page: Page) {
     this.page = page;
   }
 
   async sortBy(option: string) {
+    // option values: 'lohi', 'hilo', 'az', 'za'
     await this.page.selectOption('.product_sort_container', option);
   }
 
   async getProductNames() {
-    return this.page.locator('.inventory_item_name').allTextContents();
+    return await this.page.locator('.inventory_item_name').allTextContents();
   }
 
   async getProductPrices() {
-    const priceTexts = await this.page.locator('.inventory_item_price').allTextContents();
-    return priceTexts.map(p => parseFloat(p.replace('$', '')));
+    const prices = await this.page.locator('.inventory_item_price').allTextContents();
+    // strip the dollar sign and convert to numbers
+    return prices.map(p => parseFloat(p.replace('$', '')));
   }
 
   async addToCartByName(productName: string) {
+    // find the product card that matches the name and click its button
     await this.page
       .locator('.inventory_item')
       .filter({ hasText: productName })
@@ -30,10 +33,10 @@ export class InventoryPage {
 
   async getCartCount() {
     const badge = this.page.locator('.shopping_cart_badge');
-    const visible = await badge.isVisible();
-    if (!visible) return 0;
-    const text = await badge.textContent();
-    return parseInt(text ?? '0');
+    const isVisible = await badge.isVisible();
+    if (!isVisible) return 0;
+    const count = await badge.textContent();
+    return parseInt(count ?? '0');
   }
 
   async goToCart() {
@@ -46,6 +49,7 @@ export class InventoryPage {
 
   async logout() {
     await this.openBurgerMenu();
+    // wait a moment for the menu to slide open
     await this.page.locator('#logout_sidebar_link').click();
   }
 }

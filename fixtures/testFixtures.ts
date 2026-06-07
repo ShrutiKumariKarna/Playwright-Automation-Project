@@ -1,11 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { test as base, Page } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-type AppFixtures = {
+// custom fixture types
+type MyFixtures = {
   loginPage: LoginPage;
   inventoryPage: InventoryPage;
   cartPage: CartPage;
@@ -13,7 +13,8 @@ type AppFixtures = {
   authenticatedPage: Page;
 };
 
-export const test = base.extend<AppFixtures>({
+// extending playwright's base test with our own fixtures
+export const test = base.extend<MyFixtures>({
 
   loginPage: async ({ page }: { page: Page }, use: (r: LoginPage) => Promise<void>) => {
     await use(new LoginPage(page));
@@ -31,10 +32,12 @@ export const test = base.extend<AppFixtures>({
     await use(new CheckoutPage(page));
   },
 
+  // this fixture logs in before the test starts
+  // so i dont have to repeat login steps in every test
   authenticatedPage: async ({ page }: { page: Page }, use: (r: Page) => Promise<void>) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.goto();
-    await loginPage.login(
+    const login = new LoginPage(page);
+    await login.goto();
+    await login.login(
       process.env.STANDARD_USER ?? 'standard_user',
       process.env.PASSWORD ?? 'secret_sauce'
     );
